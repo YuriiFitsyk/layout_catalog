@@ -13,6 +13,15 @@
     align-self: center;
     width: $logo-size;
     height: $logo-size;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale($logo-scale);
+
+      @media (max-width: 900px) {
+        transform: scale($logo-scale) translate(-20%, 0);
+      }
+    }
   }
 
   &__logo-img {
@@ -43,6 +52,7 @@
     position: relative;
     text-transform: uppercase;
     @include font-medium;
+    transition: color 1s;
 
     &:hover {
       color: $action-color;

@@ -1,16 +1,16 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 
   &--size {
-    max-width: $card-width * 4 + $max-margin-between-cards * 3;
-    width: calc(100% - 40px);
+    max-width: ($card-width + $margin-between-cards*2) * $max-cards-in-line;
+    width: calc(100% - 16px);
     margin: 0 auto;
   }
 
   &__card {
     width: $card-width;
-    margin-bottom: 50px;
+    margin: 0 $margin-between-cards 50px;
   }
 }

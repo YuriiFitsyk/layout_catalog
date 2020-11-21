@@ -1,14 +1,31 @@
 .card {
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card-border-color;
   border-radius: 5px;
-  padding: 30px 14px 15px;
+  padding: 0 14px 15px;
   box-sizing: border-box;
 
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0  5px 15px;
+    height: 194px;
+  }
+
   &__image {
-    display: block;
-    margin: 0  5px 45px;
+    padding: 11px 0;
     height: 134px;
     width: 160px;
+
+    border: 3px solid transparent;
+    border-radius: 4px;
+
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.2);
+      border-color: $card-border-color;
+    }
   }
 
   &__description {
@@ -52,6 +69,7 @@
     background-color: $action-color;
     border: 1px solid $action-color;
     border-radius: 5px;
+    transition: background-color 1s, color 1s;
 
     &:hover {
       background-color: #fff;
