@@ -1,16 +1,15 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,200px);
+  grid-gap: $margin-between-cardsY $margin-between-cardsX;
   justify-content: center;
-  flex-wrap: wrap;
 
   &--size {
-    max-width: ($card-width + $margin-between-cards*2) * $max-cards-in-line;
-    width: calc(100% - 16px);
+    max-width: ($card-width + $margin-between-cardsX) * $max-cards-in-line;
     margin: 0 auto;
   }
 
   &__card {
     width: $card-width;
-    margin: 0 $margin-between-cards 50px;
   }
 }
